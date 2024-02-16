@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="robots" content="index, follow">
+  <meta name="description" content="">
+  <title>Перегородки</title>
+  
+  <!-- CSS only -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+  
+  <link rel="stylesheet" href="assets/css/style.min.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+
+
+
+    ._progress {
+      height: 100vh;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      padding-top: 10rem;
+      background: #282828;
+
+    }
+ 
+    ._progress ol {
+      list-style-type: decimal;
+      list-style-position: inside;
+      list-style: none;
+      counter-reset: my-awesome-counter;
+
+    }
+
+
+
+    ol li {
+
+      font-family: Ubuntu;
+      font-size: 1.5vmax;
+      border: 0.1rem solid #ffd699;
+      background: #f4ab76;
+      padding: 0.5rem;
+      margin-bottom: 1rem;
+      border-radius: 0 1.5rem 1.5rem 0;
+transition: all 0.3s;
+      counter-increment: my-awesome-counter;
+      position: relative;
+      z-index: 5;
+    }
+
+
+    ol li::before {
+      content: counter(my-awesome-counter) ". ";
+      color: black;
+      left: -2.5rem;
+      position: absolute;
+      background: #5f8cc7;
+      padding-left: 0.2rem;
+      border-radius: 0.5rem 0 0 0.5rem;
+     width: 2.5rem;
+      z-index: 1;
+      transition: all 0.3s ease-in-out;
+    }
+
+    ol li:hover::before {
+      left: -5rem;
+      width: 5rem;
+    }
+    ol li:hover {
+    transform: scale(1.05);
+    }
+
+    ._progress__link {
+      width: 100%;
+      display: inline-block;
+      font-size: 1.5vmax;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: black;
+      transition: opacity 0.5s;
+      position: relative;
+      z-index: 30;
+    }
+
+    ._progress__title {
+      font-family: Ubuntu;
+      font-size: 1.8vmax;
+      text-transform: uppercase;
+      color: white;
+      margin-bottom: 7rem;
+
+    }
+
+    @media (max-width:1024px) {
+
+      ._progress__title {
+      margin-bottom: 3rem;
+    }
+
+    ol li::before {
+    
+      left: -1.5rem;
+   
+     width: 1.5rem;
+
+    }
+
+    ol li:hover::before {
+      left: -3rem;
+      width: 3rem;
+    }
+
+    }
+  </style>
+</head>
+
+<body>
+
+
+  <main>
+
+    <div class="_progress">
+      <div class="_progress__inner">
+        <p class="_progress__title">Содержание:</p>
+        <ol>
+
+          
+          <li><a href="main.html" class="_progress__link" target="_blank">Главная</a></li>
+          <li><a href="about.html" class="_progress__link" target="_blank">О компании</a></li>
+          <li><a href="price.html" class="_progress__link" target="_blank">Цены</a></li>
+          <li><a href="servises.html" class="_progress__link" target="_blank">Услуги</a></li>
+          <li><a href="septum-al.html" class="_progress__link" target="_blank">Алюминиевые перегородки</a></li>
+          <li><a href="glass.html" class="_progress__link" target="_blank">Стекло</a></li>
+          <li><a href="profect.html" class="_progress__link" target="_blank">Дизайн-проект</a></li>
+          <li><a href="portfolio.html" class="_progress__link" target="_blank">Портфолио</a></li>
+          <li><a href="type.html" class="_progress__link" target="_blank">Проект</a></li>
+          <li><a href="contact.html" class="_progress__link" target="_blank">Контакты</a></li>
+          
+
+        </ol>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- JS -->
+</body>
+
+</html>

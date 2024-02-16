@@ -1,0 +1,165 @@
+.project {
+  &__text {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    width: 50%;
+    @include breakpoint($sm-bp) {
+      width: 100%;
+      font-size: 1.6rem;
+    }
+  }
+
+  button {
+    margin-top: 6rem;
+    @include breakpoint($sm-bp) {
+      width: 100%;
+      margin-top: 0;
+    }
+  }
+
+  &__item-img {
+    height: 34rem;
+    @include breakpoint($sm-bp) {
+      height: 20rem;
+      width: 32rem;
+    }
+   img {
+     border-radius: 0.8rem;
+   }
+  }
+
+  h1 {
+    @include breakpoint($sm-bp) {
+      font-size: 3.2rem;
+      letter-spacing: 0.16rem;
+    }
+  }
+
+  h3 {
+    margin-bottom: 2rem;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  &__desc-item {
+    padding: 2rem 0;
+    border-bottom: 0.1rem solid $text-color;
+    @include breakpoint($sm-bp) {
+      padding: 0.1rem 0;
+    }
+    div {
+      display: flex;
+      justify-content: space-between;
+
+      @include breakpoint($sm-bp) {
+        flex-direction: column;
+        position: relative;
+      }
+
+      span {
+        font-size: 1.6rem;
+        @include breakpoint($sm-bp) {
+          position: absolute;
+          bottom: -135%;
+        }
+      }
+
+    }
+  }
+
+  &__container {
+    display: flex;
+    gap: 12rem;
+    margin-top: 12rem;
+    @include breakpoint($xl-bp) {
+      display: none;
+    }
+  }
+
+  &__desc {
+    border-radius: 0.8rem;
+    background-color: $card-bg;
+    padding: 4rem;
+    @include breakpoint($xl-bp) {
+      padding: 2rem 2rem 4rem 2rem;
+    }
+  }
+
+  &__list {
+    margin-top: 2rem;
+    @include breakpoint($sm-bp) {
+      display: flex;
+      flex-direction: column;
+      gap: 4rem;
+    }
+  }
+
+  &__social {
+    display: flex;
+    justify-content: space-between;
+    @include breakpoint($xl-bp) {
+      flex-direction: column;
+      gap: 2rem;
+      justify-content: center;
+    }
+  }
+
+  &__social {
+    margin-top: 4rem;
+
+    div {
+      display: flex;
+      gap: 2rem;
+      align-items: center;
+
+      a {
+        font-size: 2rem;
+        @include breakpoint($xl-bp) {
+          font-size: 1.6rem;
+        }
+        &:hover {
+          color: $active;
+        }
+      }
+    }
+  }
+
+  &__slider {
+    display: none;
+    @include breakpoint($xl-bp) {
+      margin-top: 10rem;
+      display: flex;
+      overflow: hidden;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      padding-bottom: 3rem;
+    }
+    @include breakpoint($sm-bp) {
+      padding-bottom: 1rem;
+      margin-bottom: 2rem;
+    }
+  }
+
+  &__swiper {
+    width: 70rem;
+    height: 83rem;
+    @include breakpoint($sm-bp) {
+      width: 32rem;
+      height: 73rem;
+    }
+  }
+
+  &__pagination {
+    bottom: 0;
+  }
+}
+
+.swiper-pagination.project__pagination {
+  bottom: 0;
+  position: absolute;
+}

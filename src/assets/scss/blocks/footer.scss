@@ -1,0 +1,93 @@
+.footer {
+  margin: 12rem auto 6rem;
+  background-color: $card-bg;
+  border-radius: 0.8rem;
+  padding: 4rem;
+  @include breakpoint($xl-bp) {
+    margin: 4rem auto;
+    padding: 2rem 2rem 4rem 2rem;
+  }
+
+  &__logo {
+    margin-bottom: 4rem;
+    &:hover {
+      cursor: pointer;
+      color: $number-color;
+    }
+  }
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    @include breakpoint($xl-bp) {
+      flex-direction: column;
+    }
+  }
+
+  &__address {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    @include breakpoint($xl-bp) {
+      width: 100%;
+    }
+
+    p a {
+      color: $text-color;
+      &:hover {
+        cursor: pointer;
+        color: #f3b414;
+      }
+    }
+
+    p:nth-child(3) {
+      margin-top: 1.7rem;
+    }
+  }
+
+  .banner__contact {
+    display: flex;
+    flex-direction: column;
+    div svg {
+      @include breakpoint($xl-bp) {
+         width: 4rem;
+         height: 4rem;
+       }
+      @include breakpoint($sm-bp) {
+        width: 3rem;
+        height: 3rem;
+      }
+    }
+  }
+
+  &__contact {
+    display: flex;
+    flex-direction: column;
+    gap: 6rem;
+    @include breakpoint($xl-bp) {
+      padding-top: 6rem;
+      align-items: flex-start
+    }
+
+    p {
+      align-self: flex-start;
+    }
+
+    div {
+      display: flex;
+      gap: 2rem;
+      align-items: center;
+      @include breakpoint($xl-bp) {
+        gap: 1rem;
+      }
+    }
+
+    button {
+      @include breakpoint($xl-bp) {
+        align-self: center;
+        width: 28rem;
+      }
+    }
+  }
+}

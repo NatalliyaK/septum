@@ -1,0 +1,216 @@
+.company {
+  padding: 20rem 0 12rem 0;
+  @include breakpoint($sm-bp) {
+    padding: 10rem 0;
+  }
+  @include breakpoint($sm-bp) {
+    padding: 5rem 0 10rem;
+  }
+
+  &__inf {
+    //height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 45%;
+    @include breakpoint($xl-bp) {
+      width: 100%;
+    }
+  }
+
+  h1 {
+    margin-bottom: 2rem;
+  }
+
+  button {
+    margin-top: 6rem;
+  }
+
+  &__people {
+    padding-top: 12rem;
+    @include breakpoint($xl-bp) {
+      padding-top: 10rem;
+    }
+
+    h2 {
+      padding-bottom: 4rem;
+    }
+
+    &-container {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      row-gap: 4rem;
+      column-gap: 2rem;
+      justify-content: space-between;
+      @include breakpoint($xl-bp) {
+        display: none;
+      }
+    }
+
+    &-item {
+      width: 31%;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      @include breakpoint($xl-bp) {
+        width: 100%;
+      }
+    }
+
+    &-img {
+      width: 44.7rem;
+      height: 34rem;
+      @include breakpoint($xl-bp) {
+        width: 33rem;
+        height: 20.4rem;
+      }
+
+      img {
+        border-radius: 0.8rem;
+      }
+    }
+
+    &-desc {
+      padding: 4rem;
+      border-radius: 0.8rem;
+      background-color: $card-bg;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      @include breakpoint($xl-bp) {
+        padding: 2rem;
+      }
+
+      span {
+        font-size: 2.4rem;
+        letter-spacing: 0.12rem;
+      }
+    }
+  }
+
+  &__slider {
+    display: none;
+    @include breakpoint($xl-bp) {
+      position: relative;
+      display: flex;
+      overflow: hidden;
+      padding-bottom: 3rem;
+    }
+  }
+
+  &__swiper {
+    height: 49rem;
+    width: 69rem;
+    @include breakpoint($sm-bp) {
+      width: 33rem;
+    }
+  }
+
+  &__pagination {
+    position: absolute;
+    bottom: 2%;
+    left: 50%;
+  }
+
+  .reviews {
+    padding-top: 12rem;
+    @include breakpoint($xl-bp) {
+      padding-top: 10rem;
+    }
+    @include breakpoint($sm-bp) {
+      padding-bottom: 10rem;
+    }
+
+    h2 {
+      padding-bottom: 4rem;
+    }
+
+    &__slider {
+      position: relative;
+      width: 150rem;
+      margin: 0 auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0 7rem 4rem 5rem;
+      @include breakpoint($xl-bp) {
+        width: 71rem;
+        padding: 0 7rem 4rem 5rem;
+      }
+      @include breakpoint($sm-bp) {
+        width: 32rem;
+        padding: 0 3rem 3rem 2rem;
+      }
+    }
+
+    //&__pagination {
+    //  bottom: -7rem;
+    //}
+
+    &__swiper {
+      width: 133rem;
+      overflow: hidden;
+    }
+
+    &__item {
+      p {
+        display: -webkit-box;
+        -webkit-line-clamp: 4;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        line-height: 1;
+      }
+    }
+
+    &__pagination {
+      @include breakpoint($sm-bp) {
+        display: none;
+      }
+      @include breakpoint($sm-bp) {
+        display: block;
+      }
+    }
+
+    &__item {
+      height: 27rem;
+      padding: 4rem;
+      border-radius: 0.8rem;
+      background-color: $card-bg;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      @include breakpoint($sm-bp) {
+        padding: 2rem;
+        height: 21rem;
+        h3 {
+          font-size: 1.6rem;
+        }
+
+        p {
+          font-size: 1.6rem;
+        }
+
+        span a {
+          font-size: 1.2rem;
+        }
+      }
+    }
+
+  }
+}
+
+.swiper-button-prev.review__arrow-left,
+.swiper-button-next.review__arrow-right {
+  width: 3rem;
+  height: 3rem;
+  @include breakpoint($sm-bp) {
+    display: none;
+  }
+}
+
+.swiper-pagination.review__pagination {
+  @include breakpoint($xl-bp) {
+    bottom: -2%;
+  }
+}

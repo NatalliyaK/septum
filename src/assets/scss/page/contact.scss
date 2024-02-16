@@ -1,0 +1,53 @@
+.contact {
+  h1 {
+    margin: 20rem 0 4rem;
+    @include breakpoint($xl-bp) {
+      margin: 6rem 0 4rem;
+    }
+  }
+
+  h3 {
+    border-bottom: 0.1rem solid $text-color;
+    padding-bottom: 2rem;
+  }
+
+  p {
+    padding-top: 2rem;
+  }
+
+  &__container {
+    display: flex;
+    gap: 4rem;
+    @include breakpoint($xl-bp) {
+      flex-direction: column;
+      align-items: center;
+    }
+    @include breakpoint($sm-bp) {
+      margin-bottom: 10rem;
+    }
+  }
+
+  &__inf {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    a:hover,
+    a+p:hover {
+      color: $active;
+    }
+  }
+}
+
+.wrapper-map{
+  width: 64rem;
+  height: 58rem;
+  flex: none;
+  @include breakpoint($sm-bp) {
+    width: 33rem;
+    height: 35rem;
+  }
+}
+
+#YMapsID ymaps {
+  border-radius: 0.8rem;
+}

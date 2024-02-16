@@ -1,0 +1,113 @@
+body.popup-open {
+  overflow: hidden;
+}
+
+.popup__wrapper.active {
+  visibility: visible;
+
+  &>.po-pup {
+    transform: translateX(0);
+    transition: .3s;
+    overflow-y: auto; /* Добавить скролл при переполнении */
+  }
+}
+
+.popup__wrapper {
+  visibility: hidden;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  background: rgba(239, 241, 242, 0.12);
+  backdrop-filter: blur(15px);
+  display: flex;
+  justify-content: flex-end;
+
+}
+
+.po-pup {
+  padding: 4.7rem 3.7rem;
+  background-color: $main-color;
+  width: 74rem;
+  transform: translateX(100%);
+  transition: .3s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  @include breakpoint($xl-bp) {
+    padding: 1.7rem 1.7rem;
+    gap: 1rem;
+  }
+
+  svg {
+    width: 3rem;
+    height: 3rem;
+    &:hover {
+      cursor: pointer;
+      stroke: #f3b414;
+    }
+  }
+}
+
+.popup__wrapper.active {
+  visibility: visible;
+
+  &>.po-pup {
+    transform: translateX(0);
+    transition: .3s;
+  }
+}
+
+.file-upload {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  border: 2px dashed $text-agree;
+  width: 41rem;
+  border-radius: 0.8rem;
+  gap: 1rem;
+  @include breakpoint($xl-bp) {
+    align-self: center;
+  }
+  @include breakpoint($sm-bp) {
+    width: 100%;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+
+    svg {
+      width: 4rem;
+      height: 4rem;
+      align-self: center;
+      &:hover {
+        stroke: none;
+        cursor: default;
+      }
+    }
+
+    p.small{
+      font-size: 1.6rem;
+    }
+  }
+
+  &__input {
+    display: none;
+  }
+
+  .button {
+    padding: 2rem 5rem;
+  }
+
+  button {
+    margin-top: 3rem;
+    padding: 1.2rem 1.5rem;
+  }
+}

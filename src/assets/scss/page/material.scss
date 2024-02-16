@@ -1,0 +1,20 @@
+.material {
+  h1 {
+    margin: 20rem 0 4rem;
+    @include breakpoint($xl-bp) {
+      margin: 6rem 0 4rem;
+    }
+  }
+
+  .services__item__linc {
+    @include breakpoint($xl-bp) {
+      padding-top: 3rem;
+    }
+  }
+
+  .services__list {
+    @include breakpoint($sm-bp) {
+      margin-bottom: 10rem;
+    }
+  }
+}

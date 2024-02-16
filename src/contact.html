@@ -1,0 +1,44 @@
+<section class="contact wrapper">
+    <h1>Контакты</h1>
+    <div class="contact__container">
+        <div class="contact__inf">
+            <div>
+                <h3>Адрес</h3>
+                <p>г. Москва, Киевское шоссе, 22-й км, поселение Московский, домовладение 4, строение 2, офисный подъезд 14, офис 512-В</p>
+            </div>
+            <div>
+                <h3>Телефон</h3>
+                <p><a href="tel:+7 (495) 646-80-06">+7 (495) 646-80-06</a></p>
+            </div>
+            <div>
+                <h3>Почта</h3>
+                <p><a href="mailto:peregorodki@gmail.com">peregorodki@gmail.com</a></p>
+            </div>
+            <div>
+                <h3>Реквизиты</h3>
+                <p><a href="#" class="underline">Скачать файл с реквизитами</a></p>
+            </div>
+        </div>
+        <div class='wrapper-map'>
+            <div id="YMapsID" style="width:100%;height:100%;"></div>
+        </div>
+    </div>
+    <div class="request">
+        <h2 class="element-animation-left">Запросить расчет</h2>
+        <div class="request__container">
+            <div class="request__img">
+                <picture>
+                    <source srcset="assets/images/request-img-mob.jpg" media="(max-width: 500px)" />
+                    <source srcset="assets/images/reques-img.jpg" media="(max-width: 1024px)" />
+                    <img src="assets/images/reques-img.jpg" alt="image">
+                </picture>
+            </div>
+            <form class="request__form" novalidate>
+                <input type="text" placeholder="Имя" required>
+                <input type="number" placeholder="Телефон" required>
+                <p>Отправляя данную форму вы подтверждаете согласие с обработкой персональных данных и политикой конфиденциальности.</p>
+                <button class="shine-button">Отправить</button>
+            </form>
+        </div>
+    </div>
+</section>
